@@ -1,0 +1,10 @@
+
+
+.modal-header .close {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-footer {
+    justify-content: flex-start;
+}
