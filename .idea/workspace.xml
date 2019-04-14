@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0b65919-1c04-445a-94c2-f0184cfe3717" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/alertMessage.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/components/layout/layout.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
@@ -70,12 +71,12 @@
           <entry key="css" value="48" />
           <entry key="env" value="20" />
           <entry key="js" value="1" />
-          <entry key="php" value="7916" />
+          <entry key="php" value="7917" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="4242" />
+          <entry key="Blade" value="4243" />
           <entry key="CSS" value="49" />
           <entry key="JavaScript" value="1" />
           <entry key="PHP" value="3673" />
@@ -86,7 +87,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
@@ -98,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/loginForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+            <state relative-caret-position="247">
+              <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -156,8 +157,8 @@
         <option value="$PROJECT_DIR$/resources/views/components/deleteModal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/components/contentsTableView.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/contentsTable.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/loginForm.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/resources/views/loginForm.blade.php" />
       </list>
     </option>
   </component>
@@ -372,18 +373,17 @@
       <workItem from="1555060610400" duration="2608000" />
       <workItem from="1555135578636" duration="15278000" />
       <workItem from="1555188001679" duration="1521000" />
-      <workItem from="1555221513645" duration="12625000" />
+      <workItem from="1555221513645" duration="13113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82086000" />
+    <option name="totallyTimeSpent" value="82574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15524626" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15524626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -398,7 +398,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32952183" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2837838" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2837838" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -627,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/loginForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -641,6 +634,13 @@
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/loginForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
     </entry>

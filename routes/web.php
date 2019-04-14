@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'mainController@index')->middleware('login');
+Route::get('/', 'MainController@index')->middleware('login');
 
 Route::post('store', 'mainController@store')->name('store');
 
