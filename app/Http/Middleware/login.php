@@ -15,6 +15,7 @@ class login
      */
     public function handle($request, Closure $next)
     {
+
         return (session()->has('user_id')) ? $next($request) :
             redirect()->route('loginForm');
     }

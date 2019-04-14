@@ -21,7 +21,7 @@
                     <li class="nav-item">
                         <a class="nav-link btn-edit-category" href="#" data-tooltip="tooltip" data-toggle="modal"
                            data-target="#editCategoryModal" data-id="{{$subject->id}}"
-                           data-title="{{$subject->title}}" title="Hooray!">
+                           data-title="{{$subject->title}}">
                             <i class="fas fa-pen-square"></i>
                         </a>
                     </li>

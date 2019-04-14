@@ -18,34 +18,25 @@ class MainController extends Controller
      */
     public function index()
     {
-       $subjects = Subject::all();
+       $subjects = Subject::where('root_id', 0)->paginate(20);
 
-       return view('welcome', ['subjects' => $subjects]);
+       return view('main', ['subjects' => $subjects, 'rootID' => 0]);
     }
 
     public function viewCategoriesOrContents ($id)
     {
         $category = Subject::findOrFail($id);
         if ($category->level == 1){
-            $contents = Content::paginate(20);
+            $contents = Content::where('subject_id', $id)->paginate(20);
 
-            return view('contentsTable', ['contents' => $contents]);
+            return view('contentsTable', ['contents' => $contents, 'rootID' => $id]);
         }
 
-        $subjects = Subject::with('contents')->where('root_id', $id)->paginate(12);
+        $subjects = Subject::where('root_id', $id)->paginate(12);
 
-        return view('welcome', ['subjects' => $subjects, 'rootID' => $id]);
+        return view('main', ['subjects' => $subjects, 'rootID' => $id]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -61,6 +52,8 @@ class MainController extends Controller
         $storeCategory->level = 0;
         $storeCategory->save();
 
+        session()->flash('message','تمت عملية الاضافة بنجاح');
+        session()->flash('type', 'success');
         return back();
     }
 
@@ -70,22 +63,13 @@ class MainController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showContent($id)
     {
-        //
+        $content = Content::findOrFail($id);
+
+        return view('showContent', ['content' => $content]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        return redirect('/');
-
-    }
 
     /**
      * Update the specified resource in storage.
@@ -100,6 +84,9 @@ class MainController extends Controller
         $update->title = $request->title;
         $update->save();
 
+        session()->flash('message','تمت عملية التعديل بنجاح');
+        session()->flash('type', 'success');
+
         return back();
     }
 
@@ -113,6 +100,9 @@ class MainController extends Controller
     {
         $delete = Subject::findOrFail($request->delete);
         $delete->delete();
+        session()->flash('message','تمت عملية الحذف بنجاح');
+        session()->flash('type', 'danger');
+
         return back();
     }
 
@@ -123,6 +113,11 @@ class MainController extends Controller
 
     public function storeContent (Request $request)
     {
+        $category = Subject::findOrFail($request->categoryID);
+        if ($category->level == 0){
+            $category->level = 1;
+            $category->save();
+        }
 
         $store = new Content();
         $store->subject_id = $request->categoryID;
@@ -132,11 +127,8 @@ class MainController extends Controller
         $store->external_link = $request->externalLink;
         $store->save();
 
-        $category = Subject::findOrFail($request->categoryID);
-        if ($category->level == 0){
-            $category->level = 1;
-            $category->save();
-        }
+        session()->flash('message','تمت عملية التعديل بنجاح');
+        session()->flash('type', 'success');
 
         return redirect()->route('viewCategories', $request->categoryID);
     }
@@ -157,7 +149,20 @@ class MainController extends Controller
         $store->external_link = $request->externalLink;
         $store->update();
 
+        session()->flash('message','تمت عملية التعديل بنجاح');
+        session()->flash('type', 'success');
+
         return redirect()->route('index');
+    }
+
+    public function destroyContent (Request $request)
+    {
+        $delete = content::findOrFail($request->delete);
+        $delete->delete();
+        session()->flash('message','تمت عملية الحذف بنجاح');
+        session()->flash('type', 'danger');
+
+        return back();
     }
 
     public function loginForm ()
@@ -181,6 +186,7 @@ class MainController extends Controller
 
             return redirect()->route('index');
         }
+        session()->flash('message', 'الرجاء التآكد من اسم المستخدم وكلمة السر');
 
         return redirect()->route('loginForm');
     }
