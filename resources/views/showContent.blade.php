@@ -59,6 +59,9 @@
             </div>
 
         </div>
+        <a href="{{route('index')}}" class="btn btn-link" style="float: left">الرجوع للصفحة الرئيسية</a>
+        <a href="{{url()->previous()}}"
+           class="btn btn-link" style="float: left">الرجوع للصفحة السابقة</a>
     </div>
 
 @endsection

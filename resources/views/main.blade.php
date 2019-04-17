@@ -16,6 +16,14 @@
     @endif
     @if(count($subjects)>0)
         @component('components.categoriesTableView', ['subjects' => $subjects])
+            @if(isset($parentID) && $parentID > 0)
+                @slot('parentID')
+                    {{$parentID}}
+                @endslot
+                @slot('routePreviousPage')
+                    {{route('viewCategories', $parentID)}}
+                @endslot
+            @endif
         @endcomponent
 
         @component('components.addCategoryModal')
@@ -32,7 +40,16 @@
         @slot('rootID')
             {{$rootID}}
         @endslot
+        @if(isset($parentID) && $parentID > 0)
+            @slot('parentID')
+                {{$parentID}}
+            @endslot
+            @slot('routePreviousPage')
+                {{route('viewCategories', $parentID)}}
+            @endslot
+        @endif
         @endcomponent
+
         @component('components.addCategoryModal')
             @slot('rootID')
                 {{$rootID}}
@@ -42,7 +59,7 @@
 
     @component('components.deleteModal')
         @slot('routeName')
-            {{'destroyCategory'}}
+            {{'destroy_category'}}
         @endslot
     @endcomponent
 

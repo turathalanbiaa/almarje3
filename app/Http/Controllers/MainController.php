@@ -29,12 +29,14 @@ class MainController extends Controller
         if ($category->level == 1){
             $contents = Content::where('subject_id', $id)->paginate(20);
 
-            return view('contentsTable', ['contents' => $contents, 'rootID' => $id]);
+            return view('contentsTable', ['contents' => $contents, 'rootID' => $id,
+                'parentID' => $category->root_id]);
         }
 
         $subjects = Subject::where('root_id', $id)->paginate(12);
 
-        return view('main', ['subjects' => $subjects, 'rootID' => $id]);
+        return view('main', ['subjects' => $subjects, 'rootID' => $id,
+            'parentID' => $category->root_id]);
     }
 
 
@@ -190,5 +192,6 @@ class MainController extends Controller
 
         return redirect()->route('loginForm');
     }
+
 
 }
