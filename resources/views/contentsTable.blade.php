@@ -8,6 +8,9 @@
 
     @section('content')
 
+        @component('components.parentsCategory', ['categories' => $parentsCategories])
+        @endcomponent
+
         @if(session('message') || session('type'))
             @component('components.alertMessage')
                 @slot('type')

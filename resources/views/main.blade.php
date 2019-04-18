@@ -4,6 +4,11 @@
 
 @section('content')
 
+    @if(isset($parentsCategories))
+        @component('components.parentsCategory', ['categories' => $parentsCategories])
+        @endcomponent
+    @endif
+
     @if(session('message') || session('type'))
         @component('components.alertMessage')
             @slot('type')
@@ -59,7 +64,7 @@
 
     @component('components.deleteModal')
         @slot('routeName')
-            {{'destroy_category'}}
+            {{'/destroy_category'}}
         @endslot
     @endcomponent
 

@@ -30,13 +30,13 @@ class MainController extends Controller
             $contents = Content::where('subject_id', $id)->paginate(20);
 
             return view('contentsTable', ['contents' => $contents, 'rootID' => $id,
-                'parentID' => $category->root_id]);
+                'parentID' => $category->root_id, 'parentsCategories' => $this->getParentsCategory($id)]);
         }
 
         $subjects = Subject::where('root_id', $id)->paginate(12);
 
         return view('main', ['subjects' => $subjects, 'rootID' => $id,
-            'parentID' => $category->root_id]);
+            'parentID' => $category->root_id, 'parentsCategories' => $this->getParentsCategory($id)]);
     }
 
 
@@ -144,17 +144,19 @@ class MainController extends Controller
 
     public function updateContent (Request $request)
     {
-        $store = new Content();
+        $store = Content::findOrFail($request->contentID);
         $store->title = $request->title;
         $store->body = $request->body;
         $store->video_link = $request->videoLink;
         $store->external_link = $request->externalLink;
         $store->update();
 
+        $categoryID = Subject::find($request->subjectID);
+
         session()->flash('message','تمت عملية التعديل بنجاح');
         session()->flash('type', 'success');
 
-        return redirect()->route('index');
+        return redirect()->route('viewCategories', $categoryID->id);
     }
 
     public function destroyContent (Request $request)
@@ -191,6 +193,20 @@ class MainController extends Controller
         session()->flash('message', 'الرجاء التآكد من اسم المستخدم وكلمة السر');
 
         return redirect()->route('loginForm');
+    }
+
+
+    public function getParentsCategory ($id)
+    {
+
+        $categories = array();
+        do {
+            $subject = Subject::find($id);
+            array_push($categories, ['id' => $subject->id, 'title' => $subject->title]);
+            $id = $subject->root_id;
+        }while ($subject->root_id > 0);
+
+        return array_reverse($categories);
     }
 
 

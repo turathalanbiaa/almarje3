@@ -16,7 +16,7 @@
                 <form class="form-inline" id="editForm" method="POST" action="{{route('updateCategory')}}">
                     {{ csrf_field() }}
                     <label for="title" class="mr-sm-2">عنوان الصنف :</label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" name="title" id="title" value="" required>
+                    <input type="text" class="form-control mb-2 mr-sm-2" name="title" id="title" value="">
                     <input type="hidden" class="form-control mb-2 mr-sm-2" name="categoryID" id="categoryID" value="">
                     <button type="submit" class="btn btn-primary mb-2">تعديل</button>
                 </form>
