@@ -19,7 +19,7 @@
             <td>
                 <ul class="nav justify-content-center pr-0">
                     <li class="nav-item">
-                        <a class="nav-link btn-edit-category" href="#" data-tooltip="tooltip" data-toggle="modal"
+                        <a class="nav-link btn-edit-category" href="#" data-toggle="modal"
                            data-target="#editCategoryModal" data-id="{{$subject->id}}"
                            data-title="{{$subject->title}}">
                             <i class="fas fa-pen-square"></i>
@@ -38,6 +38,13 @@
     </tbody>
 </table>
 <a href="" class="btn btn-link" data-toggle="modal" data-target="#addCategoryModal" title="Hooray!">اضافة صنف</a>
+
+@if(\Illuminate\Support\Facades\Route::currentRouteName() == 'viewCategories')
+    <a href="{{route('index')}}" class="btn btn-link" style="float: left">الرجوع للصفحة الرئيسية</a>
+    <a href="{{$routePreviousPage ?? route('index')}}"
+       class="btn btn-link" style="float: left">الرجوع للصفحة السابقة</a>
+@endif
+
 
 <script>
     $(document).ready(function() {

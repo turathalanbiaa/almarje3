@@ -40,11 +40,17 @@
 
 <a href="{{route('createContent', $rootID)}}" class="btn btn-link">اضافة محتوى</a>
 
+@if(\Illuminate\Support\Facades\Route::currentRouteName() == 'viewCategories')
+    <a href="{{route('index')}}" class="btn btn-link" style="float: left">الرجوع للصفحة الرئيسية</a>
+    <a href="{{$routePreviousPage ?? route('index')}}"
+       class="btn btn-link" style="float: left">الرجوع للصفحة السابقة</a>
+@endif
+
 <script>
-    $(document).ready(function() {
-        $('body').tooltip({
-            selector: "[data-tooltip=tooltip]",
-            container: "body"
-        });
-    });
+    // $(document).ready(function() {
+    //     $('body').tooltip({
+    //         selector: "[data-tooltip=tooltip]",
+    //         container: "body"
+    //     });
+    // });
 </script>

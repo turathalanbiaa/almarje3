@@ -15,8 +15,9 @@
             <div class="modal-body">
                 <form class="form-inline" method="post" action="{{route('store')}}">
                     {{ csrf_field() }}
-                    <label for="title" class="mr-sm-2">عنوان الصنف :</label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" name="title" value="{{$title ?? ''}}">
+                    <label for="addTitle" class="mr-sm-2">عنوان الصنف :</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2"
+                           name="title" id="addTitle" required>
                     <input type="hidden" class="form-control mb-2 mr-sm-2" name="rootID"  value="{{$rootID ?? 0}}">
                     <button type="submit" class="btn btn-primary mb-2">اضافة</button>
                 </form>

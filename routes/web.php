@@ -14,15 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MainController@index')->middleware('login');
+Route::get('/', 'MainController@index')
+    ->name('index')
+    ->middleware('login');
 
-Route::post('store', 'mainController@store')->name('store');
+Route::post('store', 'mainController@store')
+    ->name('store');
 
 Route::POST('/update', 'MainController@updateCategory')
     ->name('updateCategory')
     ->middleware('login');
 
-Route::POST('/delete', 'MainController@destroyCategory')
+Route::POST('/destroy_category', 'MainController@destroyCategory')
     ->name('destroyCategory')
     ->middleware('login');
 
@@ -59,5 +62,11 @@ Route::post('/login', 'MainController@login')
 Route::get('/show_content/{id}', 'MainController@showContent')
     ->name('showContent')
     ->middleware('login');
+
+
+
+
+Route::get('test/{id}', 'MainController@testview');
+
 
 @include("api.php");

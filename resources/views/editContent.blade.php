@@ -32,8 +32,9 @@
         </div>
 
         <input type="hidden" name="contentID" value="{{$content->id}}">
+        <input type="hidden" name="subjectID" value="{{$content->subject_id}}">
 
-        <button type="submit" class="btn btn-primary">اضافة</button>
+        <button type="submit" class="btn btn-primary">تعديل</button>
     </form>
 
 @endsection

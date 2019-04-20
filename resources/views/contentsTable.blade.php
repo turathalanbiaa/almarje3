@@ -8,6 +8,9 @@
 
     @section('content')
 
+        @component('components.parentsCategory', ['categories' => $parentsCategories])
+        @endcomponent
+
         @if(session('message') || session('type'))
             @component('components.alertMessage')
                 @slot('type')
@@ -20,6 +23,14 @@
         @endif
 
         @component('components.contentsTableView', ['subjects' => $contents, 'rootID' => $rootID])
+            @if(isset($parentID) && $parentID > 0)
+                @slot('parentID')
+                    {{$parentID}}
+                @endslot
+                @slot('routePreviousPage')
+                    {{route('viewCategories', $parentID)}}
+                @endslot
+            @endif
         @endcomponent
 
         @component('components.deleteModal')
