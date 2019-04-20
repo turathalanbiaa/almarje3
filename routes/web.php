@@ -60,3 +60,4 @@ Route::get('/show_content/{id}', 'MainController@showContent')
     ->name('showContent')
     ->middleware('login');
 
+@include("api.php");

@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get("aqaed/getSubject/{root_id}" , "API\\AqaedController@getSubject");
+Route::get("aqaed/getContent/{id}" , "API\\AqaedController@getContent");
