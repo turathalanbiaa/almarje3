@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0b65919-1c04-445a-94c2-f0184cfe3717" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/components/parentsCategory.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/addCategoryModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/addCategoryModal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/backBtn.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/backBtn.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/editCategoryModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/editCategoryModal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contentsTable.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contentsTable.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/editContent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editContent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="e0b65919-1c04-445a-94c2-f0184cfe3717" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +15,7 @@
     <session id="-40116490">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -329,9 +319,10 @@
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="974" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -448,18 +439,17 @@
       <workItem from="1555221513645" duration="13437000" />
       <workItem from="1555314786220" duration="9626000" />
       <workItem from="1555479341172" duration="12007000" />
-      <workItem from="1555566293510" duration="2676000" />
+      <workItem from="1555566293510" duration="2991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107207000" />
+    <option name="totallyTimeSpent" value="107522000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="974" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20931478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20931478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -474,7 +464,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32952183" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3180873" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36690646" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
