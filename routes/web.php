@@ -18,7 +18,7 @@ Route::get('/', 'MainController@index')
     ->name('index')
     ->middleware('login');
 
-Route::post('store', 'mainController@store')
+Route::post('store', 'MainController@store')
     ->name('store');
 
 Route::POST('/update', 'MainController@updateCategory')
