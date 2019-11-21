@@ -37,7 +37,7 @@
     </tbody>
     @endif
 </table>
-
+{{$subjects->links()}}
 <a href="{{route('createContent', $rootID)}}" class="btn btn-link">اضافة محتوى</a>
 
 @if(\Illuminate\Support\Facades\Route::currentRouteName() == 'viewCategories')
