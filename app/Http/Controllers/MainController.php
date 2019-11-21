@@ -18,7 +18,7 @@ class MainController extends Controller
      */
     public function index()
     {
-       $subjects = Subject::where('root_id', 0)->paginate(20);
+       $subjects = Subject::where('root_id', 0)->orderBy('id')->paginate(20);
 
        return view('main', ['subjects' => $subjects, 'rootID' => 0]);
     }

@@ -37,6 +37,7 @@
     @endforeach
     </tbody>
 </table>
+{{$subjects->links()}}
 <a href="" class="btn btn-link" data-toggle="modal" data-target="#addCategoryModal" title="Hooray!">اضافة صنف</a>
 
 @if(\Illuminate\Support\Facades\Route::currentRouteName() == 'viewCategories')
